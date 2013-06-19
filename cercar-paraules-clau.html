@@ -35,7 +35,7 @@
             <img src="./assets/img/logo-gencat.gif" alt="Generalitat de Catalunya - gencat.cat">
           </a>
           <ul class="nav nav-tabs pull-right">
-            <li class="active"><a class="btn" href="index.html">Inici</a></li>
+            <li><a class="btn" href="index.html">Inici</a></li>
             <li><a class="btn" href="#">Ajuda</a></li>
             <li><a class="btn" href="#">Iniciar sessió</a></li>
           </ul>
@@ -52,21 +52,15 @@
 
       <div class="row">
         <div class="span9">
-          <h3>Cercar</h3>
+          <h3>Cerca per paraula clau</h3>
           <div class="navbar"> <!-- Inici del Buscador -->
             <div class="navbar-inner">
               <form class="navbar-form pull-left">
                 <input type="hidden" name="SORT" id="SORT" value="D">
-                <select name="searchtype" id="searchtype" onchange="initSort()">
+                <select name="searchtype" id="searchtype" onchange="initSort()" disabled="disabled" class="span2">
                   <option value="X" selected="selected">Paraula clau</option>
-                  <option value="t">Títol</option>
-                  <option value="a">Autor</option>
-                  <option value="d">Matèria</option>
-                  <option value="i">ISBN/ISSN</option>
-                  <option value="g">Classificació</option>
-                  <option value="c">Topogràfic </option>
                 </select>
-                <input type="text" name="searcharg">
+                <input type="text" name="searcharg" class="span3">
                 <select name="searchscope" id="searchscope">
                   <option value="0" selected="selected">Tot el catàleg</option>
                   <option value="1">BARCELONA (província)</option>
@@ -85,6 +79,60 @@
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             Indiqueu el terme de cerca que voleu trobar. Exemples: "Cuina italiana" o "El resplandor".
           </div> <!-- Fi del Bloc de Ajuda -->
+
+          <div class="well"> <!-- Inici dels Consells -->
+            <h4 class="muted">Consells sobre la cerca</h4>
+            <table class="table table-hover">
+              <tr>
+                <th></th>
+                <th>Simbol</th>
+                <th>Descripció</th>
+                <th>Exemples</th>
+              </tr>
+              <tr>
+                <th rowspan="2">Comodins</th>
+                <td><code>*</code></td>
+                <td>Serveix per poder truncar les paraules, per així remplaçar-los per altres caràcters (nombre indefinit de caraàcters).</td>
+                <td><span class="label label-info">polít*</span> <small>Totes les paraules que começan per <code>polít</code></small></td>
+              </tr>
+              <tr>
+                <!-- <th></th> -->
+                <td><code>?</code></td>
+                <td>Serveix per poder truncar les paraules, per així remplaçar-lo per una sola lletre. Podeu usar <code>?</code> per reemplaçar un caràcter en qualsevol lloc de la paraula.</td>
+                <td><span class="label label-info">nor?</span> <small>Totes les paraules que começan per <code>nor</code> més un caracter.</small></td>
+              </tr>
+              <tr>
+                <th rowspan="3">Operadors</th>
+                <td><code>and</code></td>
+                <td>Serveix per indicar que a de contenir la <span class="label">paraula A</span> y la <span class="label">paraula B</span></td>
+                <td><span class="label label-info">nord and sud</span> <small>Tot el contingut que tingui les paraules <code>nord</code> y <code>sud</code>.</small></td>
+              </tr>
+              <tr>
+                <!-- <th></th> -->
+                <td><code>or</code></td>
+                <td>Serveix per indicar que a de contenir la <span class="label">paraula A</span> o la <span class="label">paraula B</span></td>
+                <td><span class="label label-info">nord or sud</span> <small>Tot el contingut que tingui les paraula <code>nord</code> o la paraula <code>sud</code>.</small></td>
+              </tr>
+              <tr>
+                <!-- <th></th> -->
+                <td><code>and not</code></td>
+                <td>Serveix per indicar que NO a de contenir la <span class="label">paraula A</span>.</td>
+                <td><span class="label label-info">aventura and not vacances</span> <small>Tot el contingut que tingui la paraula <code>aventura</code>, menys el continguit que conte la paraula <code>aventura</code> i la paraula <code>vacances</code>.</small></td>
+              </tr>
+              <tr>
+                <th>Limitar per camps</th>
+                <td></td>
+                <td colspan="2">﻿Si es limita per un camp, la recerca per les paraules indicades es realitzarà només en aquest camp.</td>
+                <!-- <td></td> -->
+              </tr>
+              <tr>
+                <th>Agrupar</th>
+                <td></td>
+                <td colspan="2">Els resultats de la cerca per paraula clau generalment s'agrupen per rellevància per mostrar els títols més apropiats primer. Cada grup té un nivell similar de rellevància i els resultats s'ordenen dins del propi grup per data o títol. Si voleu obtenir un conjunt de resultats no agrupats, utilitzeu els operadors booleans per formar una consulta complexa.</td>
+                <!-- <td></td> -->
+              <tr>
+            </table>
+          </div> <!-- Fi dels Consells -->
         </div>
 
         <div class="span3"> <!-- Inici del la Culumna Lateral -->
@@ -92,8 +140,8 @@
 
           <ul class="nav nav-list">
             <li class="nav-header">Opcions de cerca</li>
-              <li><a href="cercar-paraules-clau.html">Cerca per paraula clau</a></li>
-              <li class="active"><a href="index.html">Cerca bàsica</a></li>
+              <li class="active"><a href="cercar-paraules-clau.html">Cerca per paraula clau</a></li>
+              <li><a href="index.html">Cerca bàsica</a></li>
               <li><a href="#">Cerca avançada</a></li>
             <li class="nav-header">La meva biblioteca</li>
               <li><a href="#">Com registrar-se</a></li>

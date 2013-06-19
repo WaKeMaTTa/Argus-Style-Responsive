@@ -1,0 +1,52 @@
+/*!
+ * Style CSS
+ *
+ * Copyleft 2013 WaKeMaTTa <m.ziata@hotmail.com>
+ * Licensed under GPLv3
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ * Designed by @WaKeMaTTa
+ */
+
+/* Logo Gencat */
+.navbar.header-logo  {
+    border-bottom: 2px solid #AC2115;
+}
+
+.navbar a img {
+    margin: 8px 8px;
+}
+
+/* Title Argus */
+.hero-unit {
+    background: #277789;
+    color: #ffffff;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    background-color: #e5e5e5;
+}
