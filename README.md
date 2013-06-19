@@ -1,4 +1,6 @@
-Argus-Style-Responsive
-======================
+Argus Estil Adaptable
+=====================
 
-Style web responsive for aplication web called Argus.
+Estil per el catalag ARGUS.
+
+![ScreenShot](https://raw.github.com/WaKeMaTTa/Argus-Style-Responsive/gh-pages/doc/responsive-argus.png)
